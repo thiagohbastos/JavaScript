@@ -7,20 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu primeiro programa</title>
     <style>
-        body {
+        body {/* comentário em CSS */
             background-color: rgb(182, 131, 2);
             color: rgb(255, 255, 255);
             font: normal 20pt Arial
         }
     </style>
 </head>
-    <h1>Olá, mundo!</h1>
+    <h1>Olá, mundo!</h1> <!-- Comentário em HTML -->
     <p>Já me livrei da maldição</p>
 <body>
     <script>
-        var b = window.confirm('Está gostando de JS?')
-        var a = window.prompt('Qual é o seu nome?')
-        window.alert(typeof a)
+        var n1 = Number.parseFloat(window.prompt('Digite um numero: ')) // ou simplesmente Number(n)
+        var n2 = Number.parseFloat(window.prompt('Digite outro número: '))
+        var s = n1 + n2
+        window.alert(`A soma entre ${n1} e ${n2} é ${s} :)`)
+
+        /* para converter em string usamos String(n) ou n.toString() */
+
     </script>
 </body>
 
