@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NACIONALIDADE</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        input{
+            text-align: center;
+            width: 100px;
+        }
+        div{
+            margin-top: 20px
+        }
+    </style>
+</head>
+<body>
+    <h1>Conferindo Nacionalidade</h1>
+    Digite seu país de origem:
+    <input type="text" name="resp" id="resp">
+    <input type="button" value="Verificar" id="verificar">
+    <div id="resultado">
+
+    </div>
+    <script>
+        var b_verificar = document.querySelector('input#verificar')
+        b_verificar.addEventListener('click', verificar)
+
+        function verificar(){
+            nacionalidade = document.querySelector('input#resp').value.toUpperCase()
+
+            resultado = document.querySelector('div#resultado')
+            resultado.innerHTML = `<p>${nacionalidade}</p>`
+
+            if (nacionalidade === 'BRASIL'){
+                resultado.innerHTML = '<p>Você é <strong>brasileiro</strong> nativo.</p>'
+            } else {
+                resultado.innerHTML = '<p>Você é <strong>estrangeiro</strong>.</p>'
+            }
+        }
+    </script>
+</body>
+</html>
